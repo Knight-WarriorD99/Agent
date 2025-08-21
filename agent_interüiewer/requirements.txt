@@ -1,0 +1,59 @@
+# 核心AI框架
+autogen-agentchat>=0.2.0
+autogen-ext>=0.2.0
+autogen-core>=0.2.0
+
+# MCP服务器框架
+fastmcp>=0.1.0
+
+# HTTP客户端
+httpx>=0.25.0
+
+# 数据处理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# 网络请求和解析
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# 向量数据库
+chromadb>=0.4.0
+
+# 嵌入模型
+sentence-transformers>=2.2.0
+
+# 文档处理
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+openpyxl>=3.1.0
+
+# 数据可视化
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# 机器学习
+scikit-learn>=1.3.0
+
+# 异步支持
+aiohttp>=3.8.0
+asyncio-mqtt>=0.11.0
+
+# 配置管理
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# 日志和监控
+loguru>=0.7.0
+
+# 测试框架
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# 开发工具
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0

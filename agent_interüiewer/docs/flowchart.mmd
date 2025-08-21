@@ -1,0 +1,15 @@
+graph TD
+  A["启动程序 main()<br/>显示提示并等待回车"] --> B["创建系统实例 ThreeRoleInterviewSystem"]
+  B --> C["获取默认候选人信息<br/>get_default_candidate_info()"]
+  C --> D["创建四个智能体<br/>技术/HR/Boss/候选人"]
+  D --> E["技术面试<br/>interviewer.initiate_chat(...)"]
+  E --> F["HR 面试<br/>hr.initiate_chat(...)"]
+  F --> G["Boss 面试<br/>boss.initiate_chat(...)<br/>上下文包含前两轮摘要"]
+  G --> H["生成评分<br/>create_score_evaluator() -> generate_reply()<br/>解析 JSON/回退默认值"]
+  H --> I["提取候选人信息<br/>create_info_extractor() -> generate_reply()<br/>保护关键字段/智能职位推断"]
+  I --> J["生成面试总结（打印）"]
+  J --> K["保存结果 JSON<br/>60plus/ 或 below60/ 按总分分类"]
+  K --> L{"是否达到 Offer 标准？<br/>(overall_score >= 60)"}
+  L -->|是| M["生成 Offer 通知信<br/>generate_offer_letter()<br/>保存到 60plus/<name>/"]
+  L -->|否| N["结束"]
+  M --> N

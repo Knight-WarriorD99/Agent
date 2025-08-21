@@ -1,0 +1,51 @@
+# SiliconFlow API配置
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
+SILICONFLOW_BASE_URL=https://api.siliconflow.cn/v1
+SILICONFLOW_MODEL=Qwen/Qwen2.5-7B-Instruct
+
+# OpenAI API配置（备用）
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_MODEL=gpt-3.5-turbo
+
+# Adzuna API（用于市场薪资数据）
+ADZUNA_APP_ID=your_adzuna_app_id_here
+ADZUNA_APP_KEY=your_adzuna_app_key_here
+ADZUNA_BASE_URL=https://api.adzuna.com/v1/api/jobs/gb/search/1
+
+# 数据库配置
+DATABASE_URL=sqlite:///./career_agent.db
+
+# 向量数据库配置
+CHROMA_PERSIST_DIRECTORY=./chroma_db
+
+# 文件上传配置
+UPLOAD_DIR=./uploads
+MAX_FILE_SIZE=10485760
+
+# 安全配置
+SECRET_KEY=your-secret-key-here-change-this-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# 数据收集配置
+DATA_COLLECTION_ENABLED=true
+COLLECTION_INTERVAL=3600
+
+# 招聘平台API配置（可选）
+LAGOU_API_KEY=your_lagou_api_key_here
+BOSS_API_KEY=your_boss_api_key_here
+ZHILIAN_API_KEY=your_zhilian_api_key_here
+
+# 学习平台API配置（可选）
+IMOOC_API_KEY=your_imooc_api_key_here
+GEEK_TIME_API_KEY=your_geek_time_api_key_here
+COURSERA_API_KEY=your_coursera_api_key_here
+
+# 监控配置
+ENABLE_MONITORING=true
+LOG_LEVEL=INFO
+
+# 缓存配置
+REDIS_URL=redis://localhost:6379
+CACHE_TTL=3600

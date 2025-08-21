@@ -1,0 +1,147 @@
+{
+  "interview_info": {
+    "candidate_name": "李伟",
+    "position": "高级开发工程师",
+    "interview_date": "2025-08-20 21:19:15",
+    "interview_id": "INT_20250820_211915",
+    "total_score": 73
+  },
+  "interview_scores": {
+    "technical_score": 21,
+    "hr_score": 23,
+    "boss_score": 19,
+    "overall_score": 73,
+    "score_details": {
+      "technical_ability": {
+        "score": 18,
+        "max_score": 25,
+        "details": "技术基础知识掌握较为扎实（8/10），但项目经验丰富度和解决问题能力表现一般（5/12）。能够应对基础技术问题，但在复杂场景的解决方案中深度有限，项目经历描述较为简单。"
+      },
+      "communication_collaboration": {
+        "score": 22,
+        "max_score": 25,
+        "details": "表达清晰度良好（9/10），团队协作意识明确（7/8），但学习态度主动性稍显不足（5/7）。能有效阐述观点，但未主动提及如何主动融入团队或解决协作矛盾的实例。"
+      },
+      "career_planning": {
+        "score": 19,
+        "max_score": 25,
+        "details": "职业目标相对明确（7/10），但发展规划的可操作性不足（5/8），自我认知客观但不够具体（6/7）。对未来3年规划缺乏细节，对岗位适配度分析存在一定模糊。"
+      },
+      "comprehensive_potential": {
+        "score": 14,
+        "max_score": 25,
+        "details": "学习能力处于平均水平（7/10），技术视野局限（4/8），对行业前沿认知不足，文化匹配度描述停留在表面（3/7）。"
+      }
+    },
+    "evaluation_summary": "候选人在技术基础和沟通表达方面表现稳定，但项目经验、问题解决深度及综合发展潜力不足，需进一步考察其技术广度与主动学习能力。",
+    "recommendation": "可以考虑录用",
+    "improvement_suggestions": [
+      "加强复杂问题分析能力训练，补充高挑战性项目案例",
+      "深化行业技术趋势学习并形成系统认知",
+      "完善职业规划细节，明确阶段性目标"
+    ]
+  },
+  "interview_rounds": {
+    "technical_interview": {
+      "interviewer": "技术面试官",
+      "focus_areas": [
+        "技术能力评估",
+        "项目经验探讨",
+        "问题解决能力测试",
+        "技术发展趋势讨论"
+      ],
+      "status": "completed",
+      "score": 21,
+      "conversation": [],
+      "summary": "技术面试已完成，评估了候选人的技术能力、项目经验和问题解决能力"
+    },
+    "hr_interview": {
+      "interviewer": "HR面试官",
+      "focus_areas": [
+        "个人背景了解",
+        "职业规划评估",
+        "团队协作能力",
+        "企业文化匹配",
+        "薪资期望沟通"
+      ],
+      "status": "completed",
+      "score": 23,
+      "conversation": [],
+      "summary": "HR面试已完成，了解了候选人的个人背景、职业规划和团队协作能力"
+    },
+    "boss_interview": {
+      "interviewer": "技术总监/CTO",
+      "focus_areas": [
+        "综合能力评估",
+        "技术战略匹配",
+        "团队融入能力",
+        "发展潜力评估",
+        "最终录用决策"
+      ],
+      "status": "completed",
+      "score": 19,
+      "conversation": [],
+      "summary": "Boss面试已完成，基于前两轮面试结果进行综合评估和最终决策"
+    }
+  },
+  "interview_flow": {
+    "total_rounds": 3,
+    "interview_sequence": [
+      "技术面试 → HR面试 → Boss面试"
+    ],
+    "boss_evaluation_basis": [
+      "基于技术面试的技术能力评估",
+      "基于HR面试的沟通协作能力评估",
+      "综合两轮面试的学习能力和发展潜力评估"
+    ]
+  },
+  "candidate_profile": {
+    "name": "李伟",
+    "age": "28",
+    "education": "计算机科学学士学位",
+    "experience_years": "5",
+    "current_position": "高级软件工程师",
+    "target_position": "高级开发工程师",
+    "technical_skills": [
+      "Python",
+      "AWS",
+      "Docker",
+      "React"
+    ],
+    "key_projects": [
+      {
+        "name": "电商平台后端开发",
+        "duration": "6个月",
+        "tech_stack": "Python, Docker, AWS",
+        "responsibilities": "负责后端架构设计与核心功能开发",
+        "achievements": "系统响应时间缩短40%"
+      },
+      {
+        "name": "用户管理系统开发",
+        "duration": "3个月",
+        "tech_stack": "React, REST API",
+        "responsibilities": "主导前端界面开发与前后端联调",
+        "achievements": "用户注册转化率提升15%"
+      }
+    ],
+    "career_goals": "未来三年成长为技术负责人，带领10人以上团队",
+    "salary_expectation": "年薪50万人民币"
+  },
+  "interview_summary": {
+    "total_rounds": 3,
+    "interview_duration": "约30-45分钟",
+    "overall_assessment": "候选人在技术基础和沟通表达方面表现稳定，但项目经验、问题解决深度及综合发展潜力不足，需进一步考察其技术广度与主动学习能力。",
+    "boss_final_evaluation": "基于前两轮面试结果，Boss进行了综合评估和最终决策",
+    "final_recommendation": "可以考虑录用",
+    "improvement_suggestions": [
+      "加强复杂问题分析能力训练，补充高挑战性项目案例",
+      "深化行业技术趋势学习并形成系统认知",
+      "完善职业规划细节，明确阶段性目标"
+    ],
+    "recommendations": [
+      "等待面试结果通知",
+      "可继续使用career_agent工具进行技能评估",
+      "制定个人发展计划"
+    ]
+  }
+}
