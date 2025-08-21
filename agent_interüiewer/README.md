@@ -1,4 +1,4 @@
-# HR Offer Agent 与三角色智能面试系统
+# Agent 智能招聘系统
 
 ## 项目简介
 
